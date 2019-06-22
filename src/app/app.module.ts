@@ -1,0 +1,33 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { ContentComponent } from './content/content.component';
+import { FooterComponent } from './footer/footer.component';
+import { TopNavComponent } from './header/top-nav/top-nav.component';
+import { HeaderContentComponent } from './header/header-content/header-content.component';
+import { MainNavComponent } from './header/main-nav/main-nav.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ContentComponent,
+    FooterComponent,
+    TopNavComponent,
+    HeaderContentComponent,
+    MainNavComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
