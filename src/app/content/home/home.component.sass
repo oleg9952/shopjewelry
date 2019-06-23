@@ -1,0 +1,242 @@
+.home
+    //background-color: orange
+    min-height: 600px
+.banner_holder
+    width: 1140px
+    height: 536px  
+    //border: 1px solid #fff
+    //background-color: green
+    background-image: url("/assets/content/home/banner.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    position: relative
+    margin-bottom: 122px
+    .buy_btn
+        width: 132px
+        height: 40px
+        //border: 1px solid #fff
+        position: absolute
+        top: 200px
+        left: 500px
+    .buy_btn:hover
+        cursor: pointer
+        background-color: #fff
+        border: 1px solid red
+
+.discounts_title
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 25px
+    line-height: 31px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 30px
+
+.discounts_holder
+    width: 1061px
+    //background-color: green
+    min-height: 100px
+    margin: 0 auto 122px
+.discounts_wrapper
+    display: grid
+    grid-template-columns: repeat(4, 218px)
+    grid-column-gap: 45px
+    grid-row-gap: 30px
+    width: 1008px
+    margin: 0 auto
+    //border: 1px solid yellow
+.discounts_card
+    height: 277px
+    //border: 1px solid #fff
+    background-color: #fff
+    position: relative
+    transition: 150ms
+    border-bottom: 4px solid #E5E5E5
+    .discount_size
+        width: 75px
+        height: 20px
+        //border: 1px solid red
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 10px
+        text-align: left
+        padding-left: 5px
+        line-height: 18px
+        background-color: #999966
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%)
+        position: absolute
+        top: 5px
+    .card_img
+        width: 130px
+        height: 130px
+        //border: 1px solid #000
+        margin: 0 auto
+        margin-bottom: 10px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+    .card_title
+        //border: 1px solid red
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        text-align: center
+        margin-bottom: 4px
+    .title_underline
+        width: 173px
+        margin: 0 auto 13px
+        height: 2px
+        background-color: #999966
+.card_price
+    width: 130px
+    height: 23px
+    //background-color: #ccc
+    margin: 0 auto 23px
+    display: flex
+    & > div
+        width: 50%
+    .price_left
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        color: #928F8F
+        line-height: 22px
+        text-decoration: line-through
+    .price_right
+        text-align: right
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+    .price_amount::after 
+        content: " $"
+.card_btn
+    width: 80px
+    height: 33px
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    text-align: center
+    background-color: #999966
+    line-height: 32px
+    color: #fff
+    margin: 0 auto
+    transition: 150ms
+    &:hover
+        cursor: pointer
+        background-color: #b2b277
+.discounts_card:hover
+    box-shadow: 0 0 20px -5px #666
+    cursor: pointer
+    border-bottom: none
+.show_all
+    height: 277px
+    background-image: url("/assets/content/home/all_products.jpg")
+    transition: 120ms
+    &:hover
+        box-shadow: 0 0 20px -5px #666
+        cursor: pointer
+
+.categories_title
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 25px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 24px
+.categories_holder
+    min-height: 420px
+    width: 100%
+    //border: 1px solid blue
+    display: flex
+    justify-content: space-between
+    margin-bottom: 137px
+.categories_left
+    width: 820px
+    //border: 1px solid #000
+    height: 420px
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 204px 182px
+    grid-gap: 32px
+    grid-template-areas: "q q q q q q q w w w w w" "e e e e e e e e e e e e" 
+    & > div
+        transition: 150ms
+    & > div:hover
+        cursor: pointer
+        box-shadow: 0 0 10px -3px #333
+    .item_1
+        grid-area: q 
+        background-image: url("/assets/content/home/category1.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    .item_2
+        grid-area: w
+        background-image: url("/assets/content/home/category2.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+    .item_3
+        grid-area: e
+        background-image: url("/assets/content/home/category3.jpg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+.item_4
+    width: 280px
+    border: 1px solid green
+    background-image: url("/assets/content/home/category4.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    transition: 150ms
+    &:hover
+        cursor: pointer
+        box-shadow: 0 0 10px -3px #333
+.category_title
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    text-transform: uppercase
+    margin-top: 11px
+    margin-left: 25px
+    color: #fff
+
+.description
+    width: 986px
+    height: 222px
+    margin: 0 auto 103px
+    //border: 1px solid #000
+    position: relative
+    .description_title
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 25px
+        text-align: center
+        color: #7C7373
+        margin-bottom: 15px
+    p 
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 25px
+    .description_line
+        height: 54px
+        width: 3px
+        background-color: #888383
+        position: absolute
+        top: 20px
+        right: 0
+    

@@ -1,0 +1,62 @@
+<div class="home">
+  <div class="banner_holder">
+    <div class="buy_btn"></div>
+  </div>
+  <h1 class="discounts_title">Super discounts</h1>
+  <div class="discounts_holder">
+    <div class="discounts_wrapper">
+      <div class="discounts_card" *ngFor="let card of discountCards">
+        <div class="discount_size">
+          {{ card.discountSize }}
+        </div>
+        <div class="card_img">
+          <img src="{{ card.img }}">
+        </div>
+        <p class="card_title">
+          {{ card.title }}
+        </p>
+        <div class="title_underline"></div>
+        <div class="card_price">
+          <div class="price_left price_amount">{{ card.oldPrice }}</div>
+          <div class="price_right price_amount">{{ card.newPrice }}</div>
+        </div>
+        <div class="card_btn">
+          Buy
+        </div>
+      </div>
+      <div class="show_all"></div>
+    </div>
+  </div>
+  <h1 class="categories_title">Categories</h1>
+  <div class="categories_holder">
+    <div class="categories_left">
+      <div class="item_1">
+        <div class="category_title">rings</div>
+      </div>
+      <div class="item_2">
+        <div class="category_title">bracelets</div>
+      </div>
+      <div class="item_3">
+        <div class="category_title">suspension bracket</div>
+      </div>
+    </div>
+    <div class="item_4">
+      <div class="category_title">earrings</div>
+    </div>
+  </div>
+  <div class="description">
+    <h3 class="description_title">
+        Flawless shine: a silver store “Silver”
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </p>
+    <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    <div class="description_line"></div>
+  </div>
+</div>
