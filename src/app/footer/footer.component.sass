@@ -1,0 +1,151 @@
+.footer
+    height: 260px
+    border-top: 1px solid #999966
+    width: 1140px
+    margin: -260px auto 0
+    //background-color: orange
+.footer_content
+    height: 223px
+    display: grid
+    grid-template-columns: 385px 430px 1fr
+    //border: 1px solid red
+    & > div
+        //border: 1px solid #000 
+        height: 100%
+.footer_logo
+    width: 209px
+    height: 73px
+    //border: 1px solid #fff
+    margin-top: 27px
+    margin-left: 27px
+    background-image: url("/assets/logo.png")
+    background-repeat: no-repeat
+    background-position: center
+
+.nav_holder
+    position: relative
+.footer_subscribe
+    width: 335px
+    height: 30px
+    //border: 1px solid #000
+    margin-left: auto
+    margin-top: 20px
+    margin-bottom: 35px
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    .join_us
+        //line-height: 30px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        text-transform: uppercase
+        a 
+            text-decoration: none 
+            color: #000
+            transition: 150ms
+        a:hover 
+            color: #8F8B8B
+.subscribe_holder
+    width: 235px
+    background: #000
+    height: 100%
+    display: grid
+    grid-template-columns: 160px 1fr
+    .subscribe_inp
+        padding: 0 11px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        color: #7C7373
+        outline: none
+        border-top: 1px solid rgba(124, 115, 115, 0.4) 
+        border-bottom: 1px solid rgba(124, 115, 115, 0.4) 
+        border-left: 1px solid rgba(124, 115, 115, 0.4) 
+        border-right: none
+    .subscribe_inp::placeholder
+        color: #7C7373
+    .subscribe_submit
+        background-color: #999966
+        color: #fff
+        border: none
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        cursor: pointer
+        outline: none
+        line-height: 30px
+        text-align: center
+    .subscribe_submit:hover
+        background-color: #b9b97b
+
+.footer_nav
+    //border: 1px solid #000000
+    height: 172px
+    display: grid
+    grid-template-columns: 1fr 1fr
+.nav_right
+    padding-left: 75px
+.left_navholder,
+.right_navholder
+    list-style: none
+    li a 
+        line-height: 30px
+        text-decoration: none
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+    li a:hover 
+        color: #8F8B8B
+
+.contact_holder
+    padding-left: 62px
+    padding-top: 93px
+.contact_content
+    //border: 1px solid #000
+    width: 220px
+    //height: 200px
+    display: flex
+    flex-direction: column
+    a 
+        text-decoration: none
+        color: #8F8B8B
+    .contact_phone
+        line-height: 20px
+
+.footer_social
+    height: 36px
+    background-color: #999966 
+    position: relative
+.copyright
+    float: left
+    color: #fff
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 200px
+    //border: 1px solid #fff 
+    text-align: center
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+.social_icons
+    width: 160px
+    height: 100%
+    //border: 1px solid #fff 
+    float: right
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .fab 
+        color: #7C7373
+        font-size: 25px
+        transition: 150ms
+    .fab:hover
+        cursor: pointer
+        color: #fff
