@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="filter_holder">
+    <div class="categories_holder">
+      <ul class="filter_nav">
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Pendants</a></li>
+        <li><a href="#">Earrings</a></li>
+      </ul>
+    </div>
+    <div class="filterby_price">
+      <p class="title_filter_price">
+        Filter by price
+      </p>
+      <div class="filter_inps">
+        <input type="text" value="20">
+        <input type="text" value="380">
+      </div>
+      <input type="range" class="range_slider">
+    </div>
+  </div>
+  <div class="rings_content">
+    <div class="rings_sort">
+      <div class="sort_options">
+        <a href="#">by popularity</a>
+        <a href="#">ascending</a>
+        <a href="#">rated</a>
+      </div>
+      <p class="current_sort">
+        by novelty
+      </p>
+      <div class="sort_arrow">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <h1 class="rings_title">Rings</h1>
+    <div class="cards_holder">
+      
+      <div class="rings_card" *ngFor="let ring of ringCards">
+        <div class="card_img">
+          <img [src]="ring.cardImg">
+        </div>
+        <p class="card_title">
+          {{ ring.cardTitle }}
+        </p>
+        <div class="title_underline"></div>
+        <div class="card_price">
+          <div class="price_left price_amount"></div>
+          <div class="price_right price_amount">
+            {{ ring.cardPrice }}
+          </div>
+        </div>
+        <div class="card_btn">
+          Buy
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

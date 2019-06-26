@@ -1,0 +1,248 @@
+.wrapper
+    //border: 1px solid #000000
+    min-height: 100vh
+    position: relative
+    display: grid
+    grid-template-columns: 200px 1fr
+.filter_holder
+    // background-color: orange
+    padding-top: 86px
+.filter_nav
+    list-style: none
+    a 
+        text-decoration: none 
+        display: block
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 13px
+        line-height: 30px
+        text-transform: uppercase
+        color: #000
+        padding-left: 10px
+        border-bottom: 1px solid #999966
+    a:hover 
+        color: #8F8B8B
+.filterby_price
+    // border: 1px solid #000
+    padding-left: 10px
+    .title_filter_price
+        font-family: Copse
+        font-style: normal
+        font-size: 14px
+        line-height: 30px
+        text-transform: uppercase
+        color: #000
+        font-weight: bold
+        margin-bottom: 10px
+    .filter_inps
+        width: 135px
+        height: 25px
+        // border: 1px solid red
+        display: flex
+        justify-content: space-between
+        margin-bottom: 12px
+        input 
+            width: 46px
+            height: 25px
+            border: 1px solid #ccc 
+            outline: none
+            text-align: center
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 14px
+    .range_slider
+        -webkit-appearance: none
+        width: 152px
+        height: 5px
+        background: #d3d3d3
+        outline: none
+    .range_slider::-webkit-slider-thumb
+        -webkit-appearance: none
+        appearance: none
+        width: 10px
+        height: 18px
+        background: #7C7373
+        cursor: pointer
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+.rings_content
+    // background-color: green
+    padding: 45px 10px 10px
+    position: relative
+.rings_sort
+    border: 1px solid #999966
+    width: 80px
+    height: 33px
+    position: absolute
+    right: 71px
+    .current_sort
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 11px
+        width: 60px
+        text-align: center
+        height: 100%
+        line-height: 30px
+        // background-color: green
+    .sort_arrow
+        // border: 1px solid #000000
+        width: 18px
+        height: 18px
+        text-align: center
+        line-height: 21px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 2px
+        font-size: 13px
+    .sort_options
+        width: 80px
+        border: 1px solid #999966
+        position: absolute
+        z-index: 1
+        top: 31px
+        left: -1px
+        display: flex
+        flex-flow: column
+        justify-content: flex-start
+        padding: 3px 0 0
+        display: none
+        animation: toggleSort 500ms forwards
+        a 
+            display: block
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            font-size: 10px
+            line-height: 12px
+            text-decoration: none
+            color: #000
+            padding-left: 4px
+            margin-bottom: 6px
+        a:hover 
+            color: #8F8B8B
+.rings_sort:hover
+    cursor: pointer
+.rings_sort:hover > .sort_options
+    display: block
+    
+
+@keyframes toggleSort
+    from 
+        transform: translateY(10px)
+        opacity: 0
+    to 
+        opacity: 1
+        transform: translateY(0)
+
+
+.rings_title
+    text-align: center
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 22px
+    text-transform: uppercase
+    margin-bottom: 60px
+
+
+
+
+.cards_holder
+    display: grid
+    grid-template-columns: repeat(3, 218px)
+    grid-column-gap: 70px
+    grid-row-gap: 50px
+    border: 1px solid #fff
+    width: 796px
+    margin: 0 auto
+.rings_card
+    height: 277px
+    //border: 1px solid #fff
+    background-color: #fff
+    position: relative
+    transition: 150ms
+    border-bottom: 4px solid #E5E5E5
+    .card_img
+        width: 130px
+        height: 130px
+        //border: 1px solid #000
+        margin: 0 auto
+        margin-bottom: 10px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+    .card_title
+        //border: 1px solid red
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        text-align: center
+        margin-bottom: 4px
+    .title_underline
+        width: 173px
+        margin: 0 auto 13px
+        height: 2px
+        background-color: #999966
+.card_price
+    width: 130px
+    height: 23px
+    //background-color: #ccc
+    margin: 0 auto 23px
+    display: flex
+    & > div
+        width: 50%
+    .price_left
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 22px
+        display: hidden
+        color: #fff
+        text-decoration: line-through
+    .price_right
+        text-align: right
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+    .price_amount::after 
+        content: " $"
+.card_btn
+    width: 80px
+    height: 33px
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    text-align: center
+    background-color: #999966
+    line-height: 32px
+    color: #fff
+    margin: 0 auto
+    transition: 150ms
+    &:hover
+        cursor: pointer
+        background-color: #b2b277
+.rings_card:hover
+    box-shadow: 0 0 20px -5px #666
+    cursor: pointer
+    border-bottom: none
+
+
