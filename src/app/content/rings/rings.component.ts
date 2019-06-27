@@ -7,6 +7,7 @@ import { IRings } from './IRings';
   styleUrls: ['./rings.component.sass']
 })
 export class RingsComponent implements OnInit {
+
   ringCards: IRings[] = [
     {
       cardImg: "/assets/content/rings/ring1.svg",
@@ -54,8 +55,30 @@ export class RingsComponent implements OnInit {
       cardPrice: 99.99
     },
     
-  ]
+  ];
 
+  themesAmount: any[] = [
+    {
+      dimensionless: 180,
+      double: 22,
+      engagementParty: 2,
+      withRocks: 27,
+      thin: 30,
+      phalangeal: 22,
+      wide: 39
+    }
+  ]
+  insertAmound: any[] = [
+    {
+      pearls: 9,
+      naturalStone: 2,
+      quartz: 2,
+      cubicZirconia: 21,
+      syntheticAgate: 1,
+      mineralGlass: 3,
+      enamel: 17
+    }
+  ]
   constructor() { }
 
   ngOnInit() {

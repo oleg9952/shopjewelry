@@ -19,6 +19,94 @@
       </div>
       <input type="range" class="range_slider">
     </div>
+    <div class="filter_container">
+      <p class="title_filter_container">
+        Themes
+      </p>
+      <div class="theme_item_holder" *ngFor="let theme of themesAmount">
+        <label class="container"> Dimensionless ({{ theme.dimensionless }})
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Double ({{ theme.double }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Engagement Party ({{ theme.engagementParty }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> With Rocks ({{ theme.withRocks }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Thin ({{ theme.thin }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Phalangeal ({{ theme.phalangeal }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Wide ({{ theme.wide }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="filter_container">
+      <p class="title_filter_container">
+        Insert
+      </p>
+      <div class="theme_item_holder" *ngFor="let insert of insertAmound">
+        <label class="container"> Pearls ({{ insert.pearls }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Natural Stone ({{ insert.naturalStone }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Quartz ({{ insert.quartz }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Cubic Zirconia ({{ insert.cubicZirconia }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Synthetic Agate ({{ insert.syntheticAgate }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Mineral Glass ({{ insert.mineralGlass }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Enamel ({{ insert.enamel }})
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="filter_container">
+      <p class="title_filter_container">
+        For whom
+      </p>
+      <div class="theme_item_holder">
+        <label class="container"> Female
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container"> Male
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+    
   </div>
   <div class="rings_content">
     <div class="rings_sort">
@@ -56,6 +144,12 @@
         </div>
       </div>
 
+    </div>
+    <div class="pagination_holder">
+      <div class="pagination_item active">1</div>
+      <div class="pagination_item">2</div>
+      <div class="pagination_item">.....</div>
+      <div class="pagination_item">15</div>
     </div>
   </div>
 </div>
