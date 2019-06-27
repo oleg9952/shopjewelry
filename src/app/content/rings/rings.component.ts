@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IRings } from './IRings';
+//import { IRings } from './IRings';
 
 @Component({
   selector: 'app-rings',
@@ -75,8 +75,8 @@ export class RingsComponent implements OnInit {
       phalangeal: 22,
       wide: 39
     }
-  ]
-  insertAmound: any[] = [
+  ];
+  insertAmount: any[] = [
     {
       pearls: 9,
       naturalStone: 2,
@@ -86,7 +86,8 @@ export class RingsComponent implements OnInit {
       mineralGlass: 3,
       enamel: 17
     }
-  ]
+  ];
+  
   constructor() { }
 
   ngOnInit() {

@@ -76,7 +76,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
      this.id = params['id'];
      this.selectedProduct = this.ringCards.find((oneProduct)=> oneProduct.id == this.id);
      });
-     console.log(this.id);
+    console.log(this.id);
    }
 
    ngOnDestroy() {

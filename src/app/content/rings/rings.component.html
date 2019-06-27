@@ -59,7 +59,7 @@
       <p class="title_filter_container">
         Insert
       </p>
-      <div class="theme_item_holder" *ngFor="let insert of insertAmound">
+      <div class="theme_item_holder" *ngFor="let insert of insertAmount">
         <label class="container"> Pearls ({{ insert.pearls }})
           <input type="checkbox">
           <span class="checkmark"></span>
@@ -126,7 +126,7 @@
     <div class="cards_holder">
       
       <div class="rings_card" *ngFor="let ring of ringCards">
-        <div class="card_img" [routerLink]="[ 'content/product-page', ring.id]">
+        <div class="card_img" [routerLink]="['/product-page', ring.id]">
           <img [src]="ring.cardImg">
         </div>
         <p class="card_title">
