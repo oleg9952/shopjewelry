@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { IRings } from './IRings';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-rings',
-  templateUrl: './rings.component.html',
-  styleUrls: ['./rings.component.sass']
+  selector: 'app-product-page',
+  templateUrl: './product-page.component.html',
+  styleUrls: ['./product-page.component.sass']
 })
-export class RingsComponent implements OnInit {
+export class ProductPageComponent implements OnInit, OnDestroy {
+  id: number;
+  sub;
 
   ringCards: any[] = [
     {
@@ -65,31 +67,20 @@ export class RingsComponent implements OnInit {
     }
   ];
 
-  themesAmount: any[] = [
-    {
-      dimensionless: 180,
-      double: 22,
-      engagementParty: 2,
-      withRocks: 27,
-      thin: 30,
-      phalangeal: 22,
-      wide: 39
-    }
-  ]
-  insertAmound: any[] = [
-    {
-      pearls: 9,
-      naturalStone: 2,
-      quartz: 2,
-      cubicZirconia: 21,
-      syntheticAgate: 1,
-      mineralGlass: 3,
-      enamel: 17
-    }
-  ]
-  constructor() { }
+  selectedProduct = {};
+
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-  }
+    this.sub = this.route.params.subscribe(params => {
+     this.id = params['id'];
+     this.selectedProduct = this.ringCards.find((oneProduct)=> oneProduct.id == this.id);
+     });
+     console.log(this.id);
+   }
+
+   ngOnDestroy() {
+    this.sub.unsubscribe();
+   }
 
 }

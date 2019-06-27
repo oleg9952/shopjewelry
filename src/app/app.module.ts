@@ -12,6 +12,7 @@ import { HeaderContentComponent } from './header/header-content/header-content.c
 import { MainNavComponent } from './header/main-nav/main-nav.component';
 import { HomeComponent } from './content/home/home.component';
 import { RingsComponent } from './content/rings/rings.component';
+import { ProductPageComponent } from './content/product-page/product-page.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RingsComponent } from './content/rings/rings.component';
     HeaderContentComponent,
     MainNavComponent,
     HomeComponent,
-    RingsComponent
+    RingsComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

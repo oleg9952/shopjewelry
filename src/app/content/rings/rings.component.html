@@ -126,7 +126,7 @@
     <div class="cards_holder">
       
       <div class="rings_card" *ngFor="let ring of ringCards">
-        <div class="card_img">
+        <div class="card_img" [routerLink]="[ 'content/product-page', ring.id]">
           <img [src]="ring.cardImg">
         </div>
         <p class="card_title">
