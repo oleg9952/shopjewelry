@@ -1,3 +1,365 @@
 .product_wrapper
     border: 1px solid black
     min-height: 250px
+
+.content_holder
+    border: 1px solid red
+    min-height: 100px
+    display: grid 
+    grid-template-columns: 1fr 1fr
+    & > div
+        border: 1px solid black
+.left
+    padding-top: 23px
+.product_slider
+    border: 1px solid #000000
+    width: 413px
+    height: 287px
+    margin: 0 auto 66px
+.delivery
+    width: 458px
+    height: 116px
+    //border: 1px solid #000000
+    margin: 0 auto 80px
+    position: relative
+    .delivery_nav
+        width: 260px
+        height: 30px
+        //border: 1px solid red
+        display: flex 
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 22px
+        a 
+            text-align: center
+            text-decoration: none
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            color: #000
+            transition: 150ms
+        a:hover
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3)
+    .typeof_delivery
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        //background-color: green
+        position: relative
+        span 
+            //background-color: #fff
+            position: absolute 
+            right: 0px
+            width: 100px
+            text-align: center
+            text-decoration: underline
+    .type_one
+        margin-bottom: 16px
+.reviews
+    width: 503px
+    height: 468px
+    //border: 1px solid #000
+    margin: 0 auto 100px
+    box-shadow: 0 0 30px -15px #666
+    padding: 30px 20px
+    .reviews_title
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        margin-bottom: 26px
+.first_line
+    //border: 1px solid red
+    display: grid
+    grid-template-columns: 160px 110px 1fr
+    margin-bottom: 22px
+    .customer_name
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 25px
+    .customer_rating
+        display: flex
+        justify-content: space-around
+        align-items: center
+    .customer_rating i
+        cursor: pointer
+        color: #bebebe
+    .customer_rating i.active 
+        color: #999966
+    .customer_rating:hover i
+        color: #999966
+    .customer_rating i:hover ~ i
+        color: #bebebe
+    .feedback_date
+        text-align: right
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 25px
+        color: #919191
+.customer_comment
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 25px
+    width: 279px
+    height: 66px
+    margin-bottom: 40px
+.addreview_title
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    margin-bottom: 37px
+.form_holder
+    width: 240px
+    height: 160px
+    //border: 1px solid red
+    .username_email
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+        & > div
+            //border: 1px solid red
+            position: relative
+        input 
+            width: 109px
+            height: 26px
+            border: 1px solid #D9D9D9
+            padding-left: 5px
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+        input:focus
+            border: 1px solid #999966
+            outline: none
+        input::placeholder
+            color: #D9D9D9
+        .active_placeholder
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            font-size: 8px
+            line-height: 5px
+            //border: 1px solid red 
+            width: 60px
+            padding-left: 4px
+            background-color: #fff
+            position: absolute
+            top: -2.5px
+            z-index: 1
+            left: 10px
+            color: #999966
+            // display: none
+    .feedback_message
+        width: 100%
+        height: 65px
+        outline: none 
+        border: 1px solid #D9D9D9
+        padding-left: 5px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 25px
+        margin-bottom: 19px
+    .feedback_message::placeholder
+        color: #D9D9D9
+    .form_submit
+        width: 80px
+        height: 33px
+        border: 1px solid #999966
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        float: right
+        transition: 150ms
+    .form_submit:hover
+        background-color: #999966
+        cursor: pointer
+        color: #fff
+
+
+
+
+
+
+.right
+    padding-top: 19px
+.charactery
+    width: 463px
+    height: 324px
+    border: 1px solid red
+    margin: 0 auto
+.charactery_title
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 22px
+    line-height: 27px
+    text-align: center
+    margin-bottom: 45px
+.charactery_content
+    //border: 1px solid red
+    min-height: 100px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    & > div 
+        //border: 1px solid green
+
+.charactery_size
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    //border: 1px solid red
+    .size_text
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 31px
+        color: #888383
+        margin-right: 15px
+    .select_size
+        width: 64px
+        height: 27px
+        margin-right: 9px
+        border: 1px solid #999966
+        background-color: #fff
+        appearance: none
+        padding-left: 19px
+        outline: none
+        background-image: url("/assets/content/product-page/arrow_down.svg")
+        background-repeat: no-repeat
+        background-position: 50px center
+    .check_mark
+        width: 15px 
+        height: 15px
+        //border: 1px solid #000
+        background-image: url("/assets/content/product-page/check.svg")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        margin-right: 5px
+.product_price
+    //border: 1px solid red
+    position: relative
+    margin-bottom: 40px
+    span
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 25px
+        line-height: 31px
+        color: #000000
+    .current_discount
+        //border: 1px solid green
+        width: 30px
+        position: absolute
+        text-align: center
+        top: 15px
+        left: 70px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 20px
+        color: #928F8F
+        .line_through
+            width: 40px
+            height: 1px
+            background-color: #000
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%) rotate(167.62deg)
+.purchase_number
+    width: 86px
+    height: 33px
+    border: 1px solid #999966
+    display: grid
+    grid-template-columns: 1fr 40px 1fr
+    margin-bottom: 30px
+    .decrement
+        background-color: #999966
+        background-image: url("/assets/content/product-page/decrement.svg")
+        background-repeat: no-repeat
+        background-position: 5px center
+        cursor: pointer
+    .p_number
+        outline: none
+        border: none
+        text-align: center
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 17px
+        line-height: 21px
+        color: #000000
+    .increment
+        background-color: #999966
+        background-image: url("/assets/content/product-page/increment.svg")
+        background-repeat: no-repeat
+        background-position: 4px center
+        cursor: pointer
+.btns_submit
+    //border: 1px solid red
+    .buy_btn
+        width: 80px
+        height: 33px
+        background-color: #999966
+        text-align: center
+        line-height: 31px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        color: #fff
+        float: left
+        margin-right: 23px
+        cursor: pointer
+        transition: 150ms
+    .buy_btn:hover
+        background-color: #bebe80
+    .whishlist_btn
+        width: 80px
+        height: 33px
+        border: 1px solid #999966 
+        text-align: center
+        line-height: 31px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        color: #000
+        float: left
+        margin-right: 23px
+        cursor: pointer
+        transition: 150ms
+    .whishlist_btn:hover
+        background-color: #bebe80
+        color: #fff
+        border: 1px solid #bebe80
+
+
+.charactery_right
+    padding-left: 60px
+.product_prop
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    font-size: 15px
+    line-height: 33px
+    color: #888383

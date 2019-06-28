@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.sass']
 })
+
 export class ProductPageComponent implements OnInit, OnDestroy {
   id: number;
   sub;
