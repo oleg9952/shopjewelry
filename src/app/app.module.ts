@@ -13,6 +13,7 @@ import { MainNavComponent } from './header/main-nav/main-nav.component';
 import { HomeComponent } from './content/home/home.component';
 import { RingsComponent } from './content/rings/rings.component';
 import { ProductPageComponent } from './content/product-page/product-page.component';
+import { SignInUpComponent } from './content/sign-in-up/sign-in-up.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProductPageComponent } from './content/product-page/product-page.compon
     MainNavComponent,
     HomeComponent,
     RingsComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    SignInUpComponent
   ],
   imports: [
     BrowserModule,
