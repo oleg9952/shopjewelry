@@ -14,6 +14,7 @@ import { HomeComponent } from './content/home/home.component';
 import { RingsComponent } from './content/rings/rings.component';
 import { ProductPageComponent } from './content/product-page/product-page.component';
 import { SignInUpComponent } from './content/sign-in-up/sign-in-up.component';
+import { CheckoutComponent } from './content/checkout/checkout.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SignInUpComponent } from './content/sign-in-up/sign-in-up.component';
     HomeComponent,
     RingsComponent,
     ProductPageComponent,
-    SignInUpComponent
+    SignInUpComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { HomeComponent } from './content/home/home.component';
 import { RingsComponent } from './content/rings/rings.component';
 import { ProductPageComponent } from './content/product-page/product-page.component';
 import { SignInUpComponent } from './content/sign-in-up/sign-in-up.component';
+import { CheckoutComponent } from './content/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'content/sign-in-up',
     component: SignInUpComponent
+  },
+  {
+    path: 'content/checkout',
+    component: CheckoutComponent
   }
 ];
 

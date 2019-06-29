@@ -10,8 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductPageComponent implements OnInit, OnDestroy {
   id: number;
   sub;
-  number = document.querySelector('.p_number');
-  btnBuy = document.querySelector('.btn_buy')
 
   ringCards: any[] = [
     {
@@ -84,10 +82,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
    ngOnDestroy() {
     this.sub.unsubscribe();
-   }
-
-   logValue() {
-     console.log(this.number.value);
    }
 
 }
