@@ -426,13 +426,20 @@
         top: 0
         left: 130px
         top: 50%
-        transform: translateY(-50%) rotate(180deg)
+        transform: translateY(-50%)
         //border: 1px solid black
         width: 20px
         height: 20px
         background-image: url("/assets/content/product-page/accordion_arrow.svg")
         background-repeat: no-repeat
         background-position: center
+        transition: 350ms
+    .accordion_arrow.active
+        left: 130px
+        top: 50%
+        transform: translateY(-50%) rotate(180deg)
+.accordion_header:hover
+    cursor: pointer
 .accordion_body
     font-family: Copse
     font-style: normal
@@ -441,8 +448,12 @@
     line-height: 20px
     letter-spacing: 0.05em
     color: #888383
+    opacity: 0
+    transition: 150ms
     p
         padding-bottom: 10px
+.accordion_body.active
+    opacity: 1
 
 .complete
     width: 199px

@@ -12,6 +12,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   id: number;
   sub;
 
+  stateCheck: boolean = false;
+
   ringCards: any[] = [
     {
       id: 1,
@@ -96,5 +98,11 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    increment() {
      this.number += 1;
      console.log(this.number);
+   }
+
+//toggle accordion
+   toggleAccordion() {
+     this.stateCheck = !this.stateCheck;
+     console.log(this.stateCheck);
    }
 }
