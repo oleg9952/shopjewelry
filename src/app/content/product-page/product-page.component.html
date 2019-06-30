@@ -3,11 +3,19 @@
         <div class="left">
             <div class="product_slider">
                 <div class="slider_options">
-                    <div class="item"></div>
-                    <div class="item"></div>
+                    <div class="item" (click)="firstProductImg()">
+                        <img [src]="selectedProduct.cardImg">
+                    </div>
+                    <div class="item" (click)="secondProductImg()">
+                        <img [src]="selectedProduct.imgPlaceholder">
+                    </div>
                 </div>
                 <div class="img_holder">
-                    <div class="slider_img"></div>
+                    <div class="slider_img">
+                            <!-- imgState ? 'selectedProduct.cardImg' : 'selectedProduct.imgPlaceholder' -->
+                        <img [src]="selectedProduct.cardImg" [style.display]="imgState ? 'block' : 'none'">
+                        <img [src]="selectedProduct.imgPlaceholder" [style.display]="imgState ? 'none' : 'block'">
+                    </div>
                 </div>
             </div>
             <div class="delivery">
@@ -33,20 +41,24 @@
                 <p class="reviews_title">
                     Decoration Reviews
                 </p>
-                <div class="first_line">
-                    <div class="customer_name">Irisha Nikitenko</div>
-                    <div class="customer_rating">
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star"></i>
+                <div class="review_holder" *ngFor="let review of reviews">
+                    <div class="first_line">
+                        <div class="customer_name">{{ review.customerName }}</div>
+                        <div class="customer_rating">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="feedback_date">{{ review.feedbackDate }}</div>
                     </div>
-                    <div class="feedback_date">15.02.2019</div>
+                    <p class="customer_comment">
+                        {{ review.feedbackMessage }}
+                    </p>
                 </div>
-                <p class="customer_comment">
-                    Despite the apparent simplicity, looks very nice on his hand. Great price!
-                </p>
+                
+
                 <p class="addreview_title">Add a review</p>
                 <form class="form_holder">
                     <div class="username_email">
@@ -60,7 +72,7 @@
                         </div>
                     </div>
                     <textarea name="feedback" class="feedback_message" placeholder="Write your review"></textarea>
-                    <button type="submit" class="form_submit">Send</button>
+                    <button type="submit" class="form_submit" (click)="addComment()">Send</button>
                 </form>
                 <div class="your_mark">
                     <p class="mark_title">Your mark</p>
@@ -122,9 +134,10 @@
                 <div class="accordion">  
                     <div class="accordion_header" (click)="toggleAccordion()">
                         All characteristics
-                        <div class="accordion_arrow" [ngClass]="stateCheck ? 'active' : ''"></div>
+                        <div class="accordion_arrow" [ngClass]="accordionState ? 'active' : ''"></div>
                     </div>
-                    <div class="accordion_body" [ngClass]="stateCheck ? 'active' : ''">
+                    <!-- [ngClass]="stateCheck ? 'active' : ''" -->
+                    <div class="accordion_body" [style.height]="accordionState ? '262px' : '0px'">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         </p>

@@ -12,66 +12,91 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   id: number;
   sub;
 
-  stateCheck: boolean = false;
+//***************get state***************
+  accordionState: boolean = false;
+  imgState: boolean = true;
+
+//***************get current date***************
+  today = new Date();
+  dd = String(this.today.getDate()).padStart(2, '0');
+  mm = String(this.today.getMonth() + 1).padStart(2, '0');
+  yyyy = this.today.getFullYear();
 
   ringCards: any[] = [
     {
       id: 1,
       cardImg: "/assets/content/rings/ring1.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "One",
       cardPrice: 40
     },
     {
       id: 2,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Two",
       cardPrice: 35
     },
     {
       id: 3,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 30
     },
     {
       id: 4,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 31.99
     },
     {
       id: 5,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 35
     },
     {
       id: 6,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 33
     },
     {
       id: 7,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 66
     },
     {
       id: 8,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 14
     },
     {
       id: 9,
       cardImg: "/assets/content/rings/ring2.svg",
+      imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
       cardPrice: 99.99
     }
   ];
 
   selectedProduct = {};
+
+  reviews: any[] = [
+    {
+      customerName: 'Irisha Nikitenko',
+      feedbackDate: '15.02.2019',
+      feedbackMessage: 'Despite the apparent simplicity, looks very nice on his hand. Great price!'
+    }
+  ]
 
   constructor(private route:ActivatedRoute) { }
 
@@ -87,7 +112,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
    }
 
-//product number counter
+//***************product number counter***************
    decrement() {
      if(this.number <= 1) {
         this.number = 1;
@@ -100,9 +125,31 @@ export class ProductPageComponent implements OnInit, OnDestroy {
      console.log(this.number);
    }
 
-//toggle accordion
+//***************toggle accordion***************
    toggleAccordion() {
-     this.stateCheck = !this.stateCheck;
-     console.log(this.stateCheck);
+     this.accordionState = !this.accordionState;
    }
+
+//***************switch product img***************
+   firstProductImg() {
+     this.imgState = true;
+     console.log(this.imgState);
+   }
+   secondProductImg() {
+    this.imgState = false;
+    console.log(this.imgState);
+   }
+
+//***************push a new comment to review***************
+/*
+   addComment() {
+      this.today = this.dd + '.' + this.mm + '.' + this.yyyy;
+      let newComment = {
+        customerName: 'Irisha Nikitenko',
+        feedbackDate: this.today,
+        feedbackMessage: 'Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!'
+      };
+      this.reviews.push(newComment);
+   }
+*/
 }
