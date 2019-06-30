@@ -141,15 +141,15 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    }
 
 //***************push a new comment to review***************
-/*
+
    addComment() {
-      this.today = this.dd + '.' + this.mm + '.' + this.yyyy;
+      let currentDate = `${this.dd}.${this.mm}.${this.yyyy}`;
       let newComment = {
-        customerName: 'Irisha Nikitenko',
-        feedbackDate: this.today,
-        feedbackMessage: 'Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!'
+        customerName: 'New Customer',
+        feedbackDate: currentDate,
+        feedbackMessage: 'Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!'
       };
       this.reviews.push(newComment);
    }
-*/
+
 }
