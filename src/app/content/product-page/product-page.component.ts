@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ProductPageComponent implements OnInit, OnDestroy {
+  number: number = 1;
   id: number;
   sub;
 
@@ -84,4 +85,16 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
    }
 
+//product number counter
+   decrement() {
+     if(this.number <= 1) {
+        this.number = 1;
+     } else {
+        this.number -= 1;
+     }
+   }
+   increment() {
+     this.number += 1;
+     console.log(this.number);
+   }
 }

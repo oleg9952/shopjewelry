@@ -101,12 +101,12 @@
                             </div>
                         </div>
                         <div class="purchase_number">
-                            <div class="decrement"></div>
-                            <input type="text" class="p_number" maxlength="2" value="1">
-                            <div class="increment"></div>
+                            <div class="decrement" (click)="decrement(number)"></div>
+                            <input type="text" class="p_number" maxlength="2" value="{{ number }}">
+                            <div class="increment" (click)="increment(number)"></div>
                         </div>
                         <div class="btns_submit">
-                            <div class="buy_btn" (click)="logValue(number)">Buy</div>
+                            <div class="buy_btn">Buy</div>
                             <div class="whishlist_btn">Whishlist</div>
                         </div>
                     </div>
