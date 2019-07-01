@@ -235,4 +235,9 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       this.cMessage = '';
       this.cEmail = '';
    }
+//***************show modal***************
+   modalState: boolean = false;
+   openModal() {
+     this.modalState = !this.modalState;
+   }
 }

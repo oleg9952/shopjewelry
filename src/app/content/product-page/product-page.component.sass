@@ -530,3 +530,143 @@
             color: #7C7373
             text-decoration: line-through
             margin-top: 5px
+
+//-----------------MODAL-----------------
+.modal_bg
+    position: fixed
+    height: 100vh
+    width: 100%
+    z-index: 10
+    top: 0
+    left: 0
+    background-color: rgba(196, 196, 196, 0.5)
+    display: none
+    animation: modalBG 1000ms forwards
+.modal_bg.active
+    display: block
+.modal
+    width: 366px
+    height: 224px
+    background-color: #fff
+    position: absolute
+    top: 0%
+    left: 50%
+    transform: translate(-50%, -101%)
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+    animation: showModal 500ms forwards ease-out
+    animation-delay: 200ms
+.modal_head
+    height: 147px
+    //border: 1px solid black
+    display: grid
+    grid-template-columns: 213px 1fr
+    & > div 
+        //border: 1px solid black
+    .head_img
+        border-right: 0.2px solid #999966
+    .head_img_holder
+        width: 138.51px
+        height: 139.33px
+        //border: 1px solid red
+        margin: 2px auto 0
+        img 
+            width: 100%
+            height: 100%
+.head_left
+    display: grid
+    grid-template-rows: 107px 1fr
+    & > div
+        //border: 1px solid red
+.left_ptitle
+    padding-top: 19px
+    padding-left: 14px
+    // padding-right: 14px
+    .checkout_name
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 20px
+        //border: 1px solid black
+        margin-bottom: 21px
+    .total_amount
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        color: #7C7373
+.left_total
+    padding-left: 14px
+    padding-right: 14px
+    padding-top: 15px
+    border-top: 0.2px solid #999966
+    .total_price
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 15px
+        color: #000
+.modal_footer
+    height: 77px
+    //border: 1px solid red
+    position: relative
+    border-top: 0.2px solid #999966
+    .modal_checkout
+        width: 78.75px
+        height: 27px
+        background-color: #999966
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 26px
+        color: #fff
+        text-align: center
+        position: absolute
+        left: 74px
+        top: 12px
+        transition: 150ms
+    .modal_checkout:hover
+        cursor: pointer
+        background-color: #b4b47c
+    .modal_view_baskets
+        border: 1px solid #999966
+        width: 78.75px
+        height: 27px
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        line-height: 26px
+        color: #000
+        text-align: center
+        position: absolute
+        left: 200px
+        top: 12px
+        transition: 150ms
+    .modal_view_baskets:hover
+        background-color: #999966
+        color: #fff 
+        cursor: pointer
+
+@keyframes modalBG
+    from 
+        background-color: rgba(196, 196, 196, 0)
+    to
+        background-color: rgba(196, 196, 196, 0.5)
+
+@keyframes showModal
+    0% 
+        top: 0%
+        left: 50%
+        transform: translate(-50%, -101%)
+    80%
+        top: 30%
+        left: 50%
+        transform: translate(-50%, 0%)
+    100%
+        top: 25%
+        left: 50%
+        transform: translate(-50%, 0%)

@@ -1,4 +1,38 @@
 <div class="product_wrapper">
+        <!-- (click)="openModal()" -->
+    <div class="modal_bg" [ngClass]="modalState ? 'active' : ''" >
+        <div class="modal">
+            <div class="modal_head">
+                <div class="head_img">
+                    <div class="head_img_holder">
+                        <img [src]="selectedProduct.cardImg">
+                    </div>
+                </div>
+                <div class="head_left">
+                    <div class="left_ptitle">
+                        <p class="checkout_name">
+                            {{ selectedProduct.cardTitle }}
+                        </p>
+                        <p class="total_amount">
+                            1 x20$
+                        </p>
+                    </div>
+                    <div class="left_total">
+                        <p class="total_price">
+                            Total: 20$
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <div class="modal_checkout" (click)="openModal()">checkout</div>
+                <div class="modal_view_baskets">view baskets</div>
+            </div>
+        </div>
+    </div>
+    
+
+
     <div class="content_holder">
         <div class="left">
             <div class="product_slider">
@@ -129,7 +163,7 @@
                             <div class="increment" (click)="increment()"></div>
                         </div>
                         <div class="btns_submit">
-                            <div class="buy_btn">Buy</div>
+                            <div class="buy_btn" (click)="openModal()">Buy</div>
                             <div class="whishlist_btn">Whishlist</div>
                         </div>
                     </div>
