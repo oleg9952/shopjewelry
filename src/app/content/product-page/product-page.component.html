@@ -117,16 +117,16 @@
                         <div class="product_price">
                             <!-- {{ selectedProduct.cardPrice }} -->
                             <!-- (calculatedPrice > selectedProduct.cardPrice) ? 'calculatedPrice' : 'selectedProduct.cardPrice' -->
-                            <span>{{ selectedProduct.cardPrice }}$</span>
+                            <span>{{ (calculatedPrice > selectedProduct.cardPrice) ? calculatedPrice : selectedProduct.cardPrice }}$</span>
                             <div class="current_discount">
                                 40$
                                 <div class="line_through"></div>
                             </div>
                         </div>
                         <div class="purchase_number">
-                            <div class="decrement" (click)="decrement(number)"></div>
+                            <div class="decrement" (click)="decrement()"></div>
                             <input type="text" class="p_number" maxlength="2" value="{{ number }}">
-                            <div class="increment" (click)="increment(number)"></div>
+                            <div class="increment" (click)="increment()"></div>
                         </div>
                         <div class="btns_submit">
                             <div class="buy_btn">Buy</div>

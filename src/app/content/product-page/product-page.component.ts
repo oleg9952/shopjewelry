@@ -55,7 +55,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       cardImg: "/assets/content/rings/ring2.svg",
       imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
-      cardPrice: 31.99
+      cardPrice: 31
     },
     {
       id: 5,
@@ -90,11 +90,81 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       cardImg: "/assets/content/rings/ring2.svg",
       imgPlaceholder: "/assets/image-placeholder.jpg",
       cardTitle: "Silver ring with fianites",
-      cardPrice: 99.99
+      cardPrice: 99
+    },
+    //-----------home cards-----------
+    {
+      id: 1.1,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card1.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Silver ring with fianites',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.2,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card2.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Earrings “Anna” (green agate)',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.3,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card3.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Silver ring with fianites',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.4,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card4.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Pendant-protector "Alatyr"',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.5,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card5.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Silver ring with blue quartz"',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.6,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card6.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Silver braslet',
+      oldPrice: 40,
+      cardPrice: 20 
+    },
+    {
+      id: 1.7,
+      discountSize: 'outlet -50%',
+      cardImg: '/assets/content/home/card7.svg',
+      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardTitle: 'Silver braslet',
+      oldPrice: 40,
+      cardPrice: 20 
     }
   ];
 
-  selectedProduct = {};
+  selectedProduct = {
+      id: '',
+      cardImg: '',
+      imgPlaceholder: '',
+      cardTitle: '',
+      cardPrice: 0
+  };
 
   reviews: any[] = [
     {
@@ -119,24 +189,21 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    }
 
 //***************product number counter***************
-  //  calculatedPrice = this.selectedProduct.cardPrice;
-  //  final = this.calculatedPrice;
+   calculatedPrice = this.selectedProduct.cardPrice;
 
    decrement() {
      if(this.number <= 1) {
         this.number = 1;
      } else {
         this.number -= 1;
-        // this.calculatedPrice = this.selectedProduct.cardPrice;
-        // this.calculatedPrice *= this.number;
-        // console.log(this.final);
+        this.calculatedPrice = this.selectedProduct.cardPrice;
+        this.calculatedPrice *= this.number;
      }
    }
    increment() {
      this.number += 1;
-    //  this.calculatedPrice = this.selectedProduct.cardPrice;
-    //  this.calculatedPrice *= this.number;
-    //  console.log(this.calculatedPrice);  
+     this.calculatedPrice = this.selectedProduct.cardPrice;
+     this.calculatedPrice *= this.number;
    }
 
 //***************toggle accordion***************

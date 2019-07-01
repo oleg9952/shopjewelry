@@ -5,11 +5,11 @@
   <h1 class="discounts_title">Super discounts</h1>
   <div class="discounts_holder">
     <div class="discounts_wrapper">
-      <div class="discounts_card" *ngFor="let card of discountCards">
+      <div class="discounts_card" *ngFor="let card of ringCards">
         <div class="discount_size">
           {{ card.discountSize }}
         </div>
-        <div class="card_img">
+        <div class="card_img" [routerLink]="['/product-page', card.id]">
           <img src="{{ card.img }}">
         </div>
         <p class="card_title">
@@ -24,13 +24,13 @@
           Buy
         </div>
       </div>
-      <div class="show_all"></div>
+      <div class="show_all" [routerLink]="'content/rings'"></div>
     </div>
   </div>
   <h1 class="categories_title">Categories</h1>
   <div class="categories_holder">
     <div class="categories_left">
-      <div class="item_1">
+      <div class="item_1" [routerLink]="'content/rings'">
         <div class="category_title">rings</div>
       </div>
       <div class="item_2">
