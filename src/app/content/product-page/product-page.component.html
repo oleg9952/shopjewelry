@@ -63,15 +63,24 @@
                 <form class="form_holder">
                     <div class="username_email">
                         <div class="username_holder">
-                            <input type="text" name="username" id="username" placeholder="Your name" required>
-                            <p class="active_placeholder">Your name</p>
+                            <input type="text" name="username" id="username" placeholder="Your name" required 
+                            [(ngModel)]="cName">
+                            <p class="active_placeholder" 
+                                [style.display]="(cName == 0 || cName == undefined) ? 'none' : 'block'">
+                                Your name
+                            </p>
                         </div>
                         <div class="email_holder">
-                            <input type="email" name="email" id="email" placeholder="Email address" required>
-                            <p class="active_placeholder">Email adress</p>
+                            <input type="email" name="email" id="email" placeholder="Email address" required
+                                [(ngModel)]="cEmail">
+                            <p class="active_placeholder"
+                                [style.display]="(cEmail == 0 || cEmail == undefined) ? 'none' : 'block'">
+                            Email adress
+                            </p>
                         </div>
                     </div>
-                    <textarea name="feedback" class="feedback_message" placeholder="Write your review"></textarea>
+                    <textarea name="feedback" class="feedback_message" placeholder="Write your review"
+                    [(ngModel)]="cMessage"></textarea>
                     <button type="submit" class="form_submit" (click)="addComment()">Send</button>
                 </form>
                 <div class="your_mark">
@@ -106,6 +115,8 @@
                             <span class="size_text">in stock</span>
                         </div>
                         <div class="product_price">
+                            <!-- {{ selectedProduct.cardPrice }} -->
+                            <!-- (calculatedPrice > selectedProduct.cardPrice) ? 'calculatedPrice' : 'selectedProduct.cardPrice' -->
                             <span>{{ selectedProduct.cardPrice }}$</span>
                             <div class="current_discount">
                                 40$

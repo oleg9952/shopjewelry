@@ -16,11 +16,17 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   accordionState: boolean = false;
   imgState: boolean = true;
 
-//***************get current date***************
+//***************add comments***************
   today = new Date();
   dd = String(this.today.getDate()).padStart(2, '0');
   mm = String(this.today.getMonth() + 1).padStart(2, '0');
   yyyy = this.today.getFullYear();
+
+  cName;
+  cMessage: string;
+  cEmail;
+//***************calculated price***************
+
 
   ringCards: any[] = [
     {
@@ -105,7 +111,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
      this.id = params['id'];
      this.selectedProduct = this.ringCards.find((oneProduct)=> oneProduct.id == this.id);
      });
-    console.log(this.id);
+    console.log(this.id); 
    }
 
    ngOnDestroy() {
@@ -113,16 +119,24 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    }
 
 //***************product number counter***************
+  //  calculatedPrice = this.selectedProduct.cardPrice;
+  //  final = this.calculatedPrice;
+
    decrement() {
      if(this.number <= 1) {
         this.number = 1;
      } else {
         this.number -= 1;
+        // this.calculatedPrice = this.selectedProduct.cardPrice;
+        // this.calculatedPrice *= this.number;
+        // console.log(this.final);
      }
    }
    increment() {
      this.number += 1;
-     console.log(this.number);
+    //  this.calculatedPrice = this.selectedProduct.cardPrice;
+    //  this.calculatedPrice *= this.number;
+    //  console.log(this.calculatedPrice);  
    }
 
 //***************toggle accordion***************
@@ -145,11 +159,13 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    addComment() {
       let currentDate = `${this.dd}.${this.mm}.${this.yyyy}`;
       let newComment = {
-        customerName: 'New Customer',
+        customerName: this.cName,
         feedbackDate: currentDate,
-        feedbackMessage: 'Despite the apparent simplicity, looks very nice on his hand. Great price!Despite the apparent simplicity, looks very nice on his hand. Great price!'
+        feedbackMessage: this.cMessage
       };
       this.reviews.push(newComment);
+      this.cName = '';
+      this.cMessage = '';
+      this.cEmail = '';
    }
-
 }
