@@ -61,14 +61,15 @@
         </div>
         <div class="basket_row">
           <div class="basket_product_title">
-            Silver rings with fianites (1RI38993-R / 12/1)
+            <!-- Silver rings with fianites (1RI38993-R / 12/1) -->
+            {{ itemList[0].cardTitle }}
           </div>
           <div class="price_and_count">
             <span class="price_total">20$</span>
             <span class="count">1 count</span>
           </div>
           <p class="charge">Charge</p>
-          <p class="total_amount">20$</p>
+          <p class="total_amount">{{ itemList[0].finalPrice }}$</p>
         </div>
         <div class="basket_row last_row">
           <div class="recycling_bin"></div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ShoppingCartService } from "../../services/shopping-cart.service";
 
 @Component({
   selector: 'app-product-page',
@@ -164,7 +165,9 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       imgPlaceholder: '',
       cardTitle: '',
       cardPrice: 0,
-      finalPrice: 0
+      finalPrice: 0,
+      numberOfRings: 0,
+      numberOfItems: 0
   };
 
   reviews: any[] = [
@@ -175,7 +178,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     }
   ]
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(
+    private route:ActivatedRoute,
+    private cartService: ShoppingCartService
+    ) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -260,4 +266,11 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     
   // }
 
+  //-----service_data
+
+  sendData() {
+    this.modalState = !this.modalState;
+    this.cartService.addToList(this.selectedProduct);
+  }
+ 
 }

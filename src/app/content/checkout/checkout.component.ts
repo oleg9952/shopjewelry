@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from "../../services/shopping-cart.service";
 // import { ProductPageComponent } from '../product-page/product-page.component';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.sass']
 })
 export class CheckoutComponent implements OnInit {
+  
+  itemList = [];
 
-
-  constructor() { }
+  constructor(private cartService: ShoppingCartService) { }
 
   productName: string;
 
@@ -17,7 +19,9 @@ export class CheckoutComponent implements OnInit {
     this.productName = $event;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.itemList = this.cartService.getList();
+  }
   
 
 }
