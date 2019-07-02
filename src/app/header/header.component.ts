@@ -12,4 +12,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+//--------TOGGLE NAV-MOBILE--------
+  navState: boolean = false;
+  toggleNav() {
+    this.navState = !this.navState;
+    console.log(this.navState);
+    
+  }
 }

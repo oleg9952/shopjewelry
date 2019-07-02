@@ -5,6 +5,7 @@ import { RingsComponent } from './content/rings/rings.component';
 import { ProductPageComponent } from './content/product-page/product-page.component';
 import { SignInUpComponent } from './content/sign-in-up/sign-in-up.component';
 import { CheckoutComponent } from './content/checkout/checkout.component';
+// import { SearchComponent } from './content/search/search.component';
 
 const routes: Routes = [
   {

@@ -2,3 +2,231 @@
     //border: 1px solid red
     min-height: 180px
     //background-color: #444
+    position: relative
+
+@media screen and (min-width: 768px)
+    .navigation_holder
+        display: none
+    .responsive_header
+        display: none
+
+@media screen and (max-width: 768px)
+    app-top-nav,
+    app-header-content,
+    app-main-nav
+        display: none
+    .header
+        min-height: 40px
+    .responsive_header
+        height: 40px
+        background-color: #fff
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1)
+        display: flex
+        justify-content: space-between
+        & > div
+            border: 1px solid black
+        .nav_logo
+            width: 130px
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .nav_btn
+            height: 30px
+            width: 30px
+            border-radius: 50%
+            border: 1px solid #999966
+            margin-left: 11px
+            position: relative
+            transform: 150ms
+            z-index: 2
+            background-color: #fff
+            outline: none
+            .nav_btn_line
+                background-color: #999966
+                width: 13px
+                height: 0.5px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: 150ms
+            .nav_btn_line:first-child
+                top: 7px
+                left: 50%
+                transform: translate(-50%, 0%)
+            .nav_btn_line:last-child
+                top: 20px
+                left: 50%
+                transform: translate(-50%, 0%)
+            .nav_btn_line:first-child.active
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(45deg)
+            .nav_btn_line:nth-child(2).active
+                display: none
+            .nav_btn_line:last-child.active
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) rotate(-45deg)
+                
+        .nav_btn:hover
+            cursor: pointer
+            background-color: #999966
+            border: 1px solid #fff
+        .nav_btn:hover > .nav_btn_line
+            background-color: #fff
+        .logo
+            // background-color: orange
+            width: 83.9px
+            height: 24.93px   
+            background-image: url("/assets/logo.png") 
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            display: none
+                
+        
+        .logo_center
+            // display: none
+            background-image: url("/assets/logo.png") 
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            width: 100px
+
+        
+        .search_basket
+            width: 130px
+            display: flex
+            justify-content: space-around
+            align-items: center
+        .search_btn
+            width: 24.39px
+            height: 25px
+            // background-color: orange
+            background-image: url("/assets/header/search-magnifier-interface-symbol.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            // border: 1px solid black
+            cursor: pointer
+        .favorite_btn
+            width: 28.43px
+            height: 25px
+            // border: 1px solid black
+            text-align: center
+            line-height: 25px
+            font-size: 24px
+            color: #999966
+            cursor: pointer
+        .basket_btn
+            width: 23.41px
+            height: 29.09px
+            // border: 1px solid black
+            background-image: url("/assets/header/shopping-bag.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            cursor: pointer
+
+        //--------nav items
+    /*
+    .navigation_holder
+        position: fixed
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-color: #999966
+        z-index: 1
+        transform: translateX(0%)
+        overflow: hidden
+        display: none*/
+
+    .navigation_holder
+        position: fixed
+        top: 50%
+        left: 50%
+        height: 50px
+        width: 50px
+        background-color: #999966
+        z-index: 1
+        transform: translate(-50%, -50%)
+        overflow: hidden
+        border-radius: 50%
+        display: none
+        animation: showNavHolder 1300ms forwards
+        transform-origin: center
+    .nav_options_holder
+        width: 200px
+        height: 300px
+        // background-color: #fff
+        position: absolute
+        top: 20%
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: space-around
+        display: none
+        a 
+            width: 100%
+            // background-color: green
+            text-align: center
+            display: block
+            line-height: 40px
+            text-decoration: none
+            color: #fff
+            font-size: 30px
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            position: relative
+            transition: 150ms
+        a:hover 
+            cursor: pointer
+            background-color: #aeae72
+        
+
+@media screen and (max-width: 425px)
+    .nav_logo
+        .logo
+            display: block
+    .logo_center
+        display: none
+    
+
+
+
+@keyframes showNavHolder
+    0%
+        top: 50%
+        left: 50%
+        height: 0px
+        width: 0px
+        transform: translate(-50%, -50%)
+        border-radius: 50%
+        background-color: #fff
+    50%
+        top: 50%
+        left: 50%
+        height: 2px
+        width: 100%
+        transform: translate(-50%, -50%)
+        border-radius: 50%
+        // background-color: #fff
+    70%
+        background-color: #767651
+    100%
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-color: #999966
+        z-index: 1
+        transform: translateX(0%)
+        border-radius: 0
+
+    
+   

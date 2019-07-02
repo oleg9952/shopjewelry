@@ -60,7 +60,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 5,
       cardImg: "/assets/content/rings/ring5_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring5_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring5_2.jpg",
       cardTitle: "The Shaughn Solitaire",
       cardPrice: 170
     },
@@ -81,7 +81,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 8,
       cardImg: "/assets/content/rings/ring8_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring8_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring8_2.jpg",
       cardTitle: "The Arsham Diamond Ring",
       cardPrice: 18
     },

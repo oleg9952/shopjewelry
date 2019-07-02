@@ -2,4 +2,34 @@
   <app-top-nav></app-top-nav>
   <app-header-content></app-header-content>
   <app-main-nav></app-main-nav>
+  <!-- [style.display]="navState ? 'block' : ''" -->
+  <div class="navigation_holder" [style.display]="navState ? 'block' : ''">
+    <div class="nav_options_holder" [style.display]="navState ? 'block' : ''">
+      <a href="#">Earrings</a>
+      <a routerLink="content/rings">Rings</a>
+      <a href="#">Bracelets</a>
+      <a href="#">Suspension</a>
+      <a href="#">% Outlet</a>
+    </div>
+  </div>
+  <div class="responsive_header">
+    <div class="nav_logo">
+      <div class="nav_btn" (click)="toggleNav()">
+        <div class="nav_btn_line" [ngClass]="navState ? 'active' : ''"></div>
+        <div class="nav_btn_line" [ngClass]="navState ? 'active' : ''"></div>
+        <div class="nav_btn_line" [ngClass]="navState ? 'active' : ''"></div>
+      </div>
+      <div class="logo"></div>
+    </div>
+    <div class="logo_center">
+
+    </div>
+    <div class="search_basket">
+      <div class="search_btn"></div>
+      <div class="favorite_btn">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="basket_btn"></div>
+    </div>
+  </div>
 </div>
