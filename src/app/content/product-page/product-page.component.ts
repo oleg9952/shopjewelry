@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -31,130 +31,130 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   ringCards: any[] = [
     {
       id: 1,
-      cardImg: "/assets/content/rings/ring1.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "One",
-      cardPrice: 40
+      cardImg: "/assets/content/rings/ring1_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring1_2.jpg",
+      cardTitle: "The Davina Diamond Ring",
+      cardPrice: 29
     },
     {
       id: 2,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Two",
-      cardPrice: 35
+      cardImg: "/assets/content/rings/ring2_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring2_2.jpg",
+      cardTitle: "The Alita Diamond Ring",
+      cardPrice: 13
     },
     {
       id: 3,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 30
+      cardImg: "/assets/content/rings/ring3_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring3_2.jpg",
+      cardTitle: "The Swathe Diamond Ring",
+      cardPrice: 37
     },
     {
       id: 4,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 31
+      cardImg: "/assets/content/rings/ring4_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring4_2.jpg",
+      cardTitle: "The Fringe Diamond Ring",
+      cardPrice: 11
     },
     {
       id: 5,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 35
+      cardImg: "/assets/content/rings/ring5_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring5_1.jpg",
+      cardTitle: "The Shaughn Solitaire",
+      cardPrice: 170
     },
     {
       id: 6,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 33
+      cardImg: "/assets/content/rings/ring6_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring6_2.jpg",
+      cardTitle: "The S Alphabet Ring",
+      cardPrice: 16
     },
     {
       id: 7,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 66
+      cardImg: "/assets/content/rings/ring7_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring7_2.jpg",
+      cardTitle: "The Roy Diamond Ring",
+      cardPrice: 32
     },
     {
       id: 8,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 14
+      cardImg: "/assets/content/rings/ring8_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring8_1.jpg",
+      cardTitle: "The Arsham Diamond Ring",
+      cardPrice: 18
     },
     {
       id: 9,
-      cardImg: "/assets/content/rings/ring2.svg",
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: "Silver ring with fianites",
-      cardPrice: 99
+      cardImg: "/assets/content/rings/ring9_1.jpg",
+      imgPlaceholder: "/assets/content/rings/ring9_2.jpg",
+      cardTitle: "The Ettore Diamond Ring",
+      cardPrice: 43
     },
     //-----------home cards-----------
     {
       id: 1.1,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card1.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
+      cardImg: '/assets/content/home/card1_1.jpg',
+      imgPlaceholder: "/assets/content/home/card1_2.jpg",
       cardTitle: 'Silver ring with fianites',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 18 
     },
     {
       id: 1.2,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card2.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Earrings “Anna” (green agate)',
+      cardImg: '/assets/content/home/card2_1.jpg',
+      imgPlaceholder: "/assets/content/home/card2_2.jpg",
+      cardTitle: 'The Naveah Diamond Ring',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 21
     },
     {
       id: 1.3,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card3.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Silver ring with fianites',
+      cardImg: '/assets/content/home/card3_1.jpg',
+      imgPlaceholder: "/assets/content/home/card3_2.jpg",
+      cardTitle: 'The Nilav Diamond Ring',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 26
     },
     {
       id: 1.4,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card4.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Pendant-protector "Alatyr"',
+      cardImg: '/assets/content/home/card4_1.jpg',
+      imgPlaceholder: "/assets/content/home/card4_2.jpg",
+      cardTitle: 'The Blink Diamond Ring',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 15 
     },
     {
       id: 1.5,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card5.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Silver ring with blue quartz"',
+      cardImg: '/assets/content/home/card5_1.jpg',
+      imgPlaceholder: "/assets/content/home/card5_2.jpg",
+      cardTitle: 'The Onaona Diamond Ring',
       oldPrice: 40,
       cardPrice: 20 
     },
     {
       id: 1.6,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card6.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Silver braslet',
+      cardImg: '/assets/content/home/card6_1.jpg',
+      imgPlaceholder: "/assets/content/home/card6_2.jpg",
+      cardTitle: 'The M Alphabet Ring',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 16 
     },
     {
       id: 1.7,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card7.svg',
-      imgPlaceholder: "/assets/image-placeholder.jpg",
-      cardTitle: 'Silver braslet',
+      cardImg: '/assets/content/home/card7_1.jpg',
+      imgPlaceholder: "/assets/content/home/card7_2.jpg",
+      cardTitle: 'The Delyth Diamond Ring',
       oldPrice: 40,
-      cardPrice: 20 
+      cardPrice: 37 
     }
   ];
 
@@ -163,7 +163,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       cardImg: '',
       imgPlaceholder: '',
       cardTitle: '',
-      cardPrice: 0
+      cardPrice: 0,
+      finalPrice: 0
   };
 
   reviews: any[] = [
@@ -184,7 +185,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     console.log(this.id); 
    }
 
-   ngOnDestroy() {
+  ngOnDestroy() {
     this.sub.unsubscribe();
    }
 
@@ -239,5 +240,24 @@ export class ProductPageComponent implements OnInit, OnDestroy {
    modalState: boolean = false;
    openModal() {
      this.modalState = !this.modalState;
+     if(this.selectedProduct.cardPrice < this.calculatedPrice) {
+        this.selectedProduct.finalPrice = this.calculatedPrice;
+      } else {
+        this.selectedProduct.finalPrice = this.selectedProduct.cardPrice;
+      }      
    }
+
+   //***************send data to checkout component***************
+  // @Output() messageEvent = new EventEmitter<string>();
+  // checkTitle;
+  // checkPrice;
+
+  // sendMessage() {
+  //   this.checkTitle = this.selectedProduct.cardTitle;
+  //   //this.checkPrice = this.selectedProduct.finalPrice;
+  //   this.messageEvent.emit(this.checkTitle);
+  //   console.log(this.checkTitle);
+    
+  // }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { ProductPageComponent } from '../product-page/product-page.component';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
+
   constructor() { }
 
-  ngOnInit() {
+  productName: string;
+
+  receiveMessage($event) {
+    this.productName = $event;
   }
+
+  ngOnInit() {}
+  
 
 }

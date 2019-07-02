@@ -11,58 +11,58 @@ export class HomeComponent implements OnInit {
     {
       id: 1.1,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card1.svg',
-      title: 'Silver ring with fianites',
+      img: '/assets/content/home/card1_1.jpg',
+      title: 'The Coira Solitaire Diamond',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 18 
     },
     {
       id: 1.2,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card2.svg',
-      title: 'Earrings “Anna” (green agate)',
+      img: '/assets/content/home/card2_1.jpg',
+      title: 'The Naveah Diamond Ring',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 21
     },
     {
       id: 1.3,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card3.svg',
-      title: 'Silver ring with fianites',
+      img: '/assets/content/home/card3_1.jpg',
+      title: 'The Nilav Diamond Ring',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 26 
     },
     {
       id: 1.4,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card4.svg',
-      title: 'Pendant-protector "Alatyr"',
+      img: '/assets/content/home/card4_1.jpg',
+      title: 'The Blink Diamond Ring',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 15 
     },
     {
       id: 1.5,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card5.svg',
-      title: 'Silver ring with blue quartz"',
+      img: '/assets/content/home/card5_1.jpg',
+      title: 'The Onaona Diamond Ring',
       oldPrice: 40,
       newPrice: 20 
     },
     {
       id: 1.6,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card6.svg',
-      title: 'Silver braslet',
+      img: '/assets/content/home/card6_1.jpg',
+      title: 'The M Alphabet Ring',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 16
     },
     {
       id: 1.7,
       discountSize: 'outlet -50%',
-      img: '/assets/content/home/card7.svg',
-      title: 'Silver braslet',
+      img: '/assets/content/home/card7_1.jpg',
+      title: 'The Delyth Diamond Ring',
       oldPrice: 40,
-      newPrice: 20 
+      newPrice: 37 
     }
   ];
   
