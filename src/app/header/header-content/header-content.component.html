@@ -1,5 +1,5 @@
 <div class="header-content">
-  <div class="logo" [routerLink]="'/'"></div>
+  <div class="logo" [routerLink]="'/'" (click)="showNumber()"></div>
   <form class="search-holder">
     <input type="search" class="search" placeholder="Search">
     <button type="submit" class="submit_search"></button>
@@ -10,8 +10,12 @@
     </div>
     <div class="whishlist_btn">Whishlist</div>
   </div>
-  <div class="basket" [routerLink]="['content/checkout']">
-    <div class="basket_icon"></div>
-    <div class="basket_btn">Basket</div>
+  <div class="basket">
+    <div class="basket_icon">
+      <div class="productCounter" [style.display]="numberOfChecked == 0 ? '' : 'block'">
+        {{ numberOfChecked == 0 ? '' : numberOfChecked }}
+      </div>
+    </div>
+    <div class="basket_btn" [routerLink]="['content/checkout']" (click)="showNumber()">Basket</div>
   </div>
 </div>

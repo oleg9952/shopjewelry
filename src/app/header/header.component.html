@@ -5,11 +5,11 @@
   <!-- [style.display]="navState ? 'block' : ''" -->
   <div class="navigation_holder" [style.display]="navState ? 'block' : ''">
     <div class="nav_options_holder" [style.display]="navState ? 'block' : ''">
-      <a href="#">Earrings</a>
-      <a routerLink="content/rings">Rings</a>
-      <a href="#">Bracelets</a>
-      <a href="#">Suspension</a>
-      <a href="#">% Outlet</a>
+      <a href="#" (click)="toggleNav()">Earrings</a>
+      <a routerLink="content/rings" (click)="toggleNav()">Rings</a>
+      <a href="#" (click)="toggleNav()">Bracelets</a>
+      <a href="#" (click)="toggleNav()">Suspension</a>
+      <a href="#" (click)="toggleNav()">% Outlet</a>
     </div>
   </div>
   <div class="responsive_header">

@@ -99,7 +99,25 @@
         background-image: url(/assets/header/shopping-bag.png)
         background-repeat: no-repeat
         background-position: 5px center
-        cursor: pointer
+        //cursor: pointer
+        position: relative
+        .productCounter
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            // border: 1px solid red
+            position: absolute
+            top: 8px
+            left: -20px
+            background-color: #999966
+            color: #fff
+            font-size: 14px
+            text-align: center
+            line-height: 20px
+            font-family: Copse
+            font-style: normal
+            font-weight: normal
+            display: none
     .basket_btn
         width: 65px
         border: 1px solid #999966
@@ -110,6 +128,7 @@
         line-height: 30px
         text-align: center
         transition: 150ms
+        outline: none
     .basket_btn:hover
         background-color: #999966
         color: #fff

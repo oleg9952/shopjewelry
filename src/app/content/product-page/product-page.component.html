@@ -14,7 +14,7 @@
                             {{ selectedProduct.cardTitle }}
                         </p>
                         <p class="total_amount">
-                            {{ number }} x20$
+                            {{ number }} x{{ selectedProduct.cardPrice }}$
                         </p>
                     </div>
                     <div class="left_total">
@@ -26,7 +26,7 @@
             </div>
             <div class="modal_footer">
                 <div class="modal_checkout" (click)="sendData()">checkout</div>
-                <div class="modal_view_baskets">view baskets</div>
+                <div class="modal_view_baskets" [routerLink]="['/content/checkout']" (click)="closeModal()">view baskets</div>
             </div>
         </div>
     </div>

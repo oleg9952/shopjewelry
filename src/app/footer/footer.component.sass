@@ -1,6 +1,6 @@
 .footer
     height: 260px
-    border-top: 1px solid #999966
+    //border-top: 1px solid #999966
     width: 1140px
     margin: -260px auto 0
     //background-color: orange
@@ -152,3 +152,65 @@
     .fab:hover
         cursor: pointer
         color: #fff
+
+
+
+//-----------responsiv-----------
+@media screen and (max-width: 1140px)
+    .footer
+        width: 100%
+        //border: 1px solid black
+    .footer_content
+        grid-template-columns: 1fr 1fr 1fr
+        & > div
+            //border: 1px solid #000 
+            height: 100%
+@media screen and (max-width: 872px)
+    .footer_content
+        grid-template-columns: 1fr 1fr
+    .contact_holder
+        display: none
+    .footer_subscribe
+        margin-right: 10px
+@media screen and (max-width: 768px)
+    .footer_content,
+    .footer_social
+        display: none
+    .footer
+        height: 84px
+        margin: -84px auto 0
+    .responsive_footer
+        //border: 1px solid black
+        height: 100%
+        position: relative
+    .contact_content-responsive
+        // border: 1px solid black
+        font-size: 10px
+        display: flex
+        flex-direction: column
+        width: 150px
+        position: absolute
+        left: 15px
+        a 
+            text-decoration: none
+            color: #8F8B8B
+        .contact_phone
+            line-height: 5px
+    .social_icons
+        // border: 1px solid black
+        width: 100px
+        height: 33px
+        margin-right: 15px
+        i 
+            font-size: 23px !important
+        i:hover
+            color: #c6c686 !important
+    .copy_right
+        height: 18px
+        width: 100%
+        background-color: #999966
+        position: absolute
+        bottom: 0
+        .copyright
+            font-size: 12px
+    

@@ -253,6 +253,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       }      
    }
 
+   closeModal() {
+    this.modalState = !this.modalState;
+   }
+
    //***************send data to checkout component***************
   // @Output() messageEvent = new EventEmitter<string>();
   // checkTitle;

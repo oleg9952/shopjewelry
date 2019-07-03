@@ -26,10 +26,6 @@ export class CheckoutComponent implements OnInit {
     this.itemList = this.cartService.getList();
   }
 
-  logArray() {
-    console.log(this.itemList.length);
-  }
-
   // removeItem() {
   //   this.cartService.removeFromList(this.itemList.id)
   // }

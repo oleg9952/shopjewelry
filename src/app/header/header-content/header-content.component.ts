@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from "../../services/shopping-cart.service";
 
 @Component({
   selector: 'app-header-content',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderContentComponent implements OnInit {
 
-  constructor() { }
+  numberOfChecked = 0;
+  checkedItems = [];
+
+  constructor(private cartService: ShoppingCartService) {  }
 
   ngOnInit() {
+    this.checkedItems = this.cartService.getList();
   }
+
+  showNumber() {
+    this.numberOfChecked = this.checkedItems.length;
+  }
+
 
 }

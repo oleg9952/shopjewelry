@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class="continue_shopping_btn" (click)="logArray()" *ngIf="itemList && itemList.length">
+      <div class="continue_shopping_btn" [routerLink]="'/content/rings'" *ngIf="itemList && itemList.length">
         Continue shopping
       </div>
     </div>
