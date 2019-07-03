@@ -172,8 +172,21 @@
     margin-left: 23px
     cursor: pointer
     transition: 150ms
+    float: left
     &:hover
         background-color: #b8b87b
+.totalPrice
+    //border: 1px solid black
+    height: 33px
+    width: 200px
+    margin-left: 200px
+    text-align: left
+    font-family: Copse
+    font-style: normal
+    font-weight: normal
+    line-height: 33px
+    font-size: 30px
+    color: #999966
 
 
 .checkout_right
@@ -199,6 +212,7 @@
     display: grid
     grid-template-columns: 175px 240px 1fr
     margin-bottom: 80px
+    position: relative
     .basket_row
         //border: 1px solid #000
 .basket_img
@@ -277,3 +291,36 @@
         cursor: pointer
         background-color: #999966
         color: #fff
+
+
+
+@media screen and (max-width: 1024px)
+    .checkout_wrapper
+        margin-bottom: 0px
+        > div 
+            //border: 1px solid black
+@media screen and (max-width: 885px)
+    .checkout_wrapper
+        min-height: 200px
+        display: flex
+        flex-flow: column-reverse
+    .checkout_left
+        //background-color: #fff
+    .checkout_holder
+        width: 367px
+        height: 698px
+        //border: 1px solid #000
+        margin: 0 auto 50px
+    .totalPrice
+        margin-left: 170px
+    .basket_holder
+        //border: 1px solid #fff
+
+@media screen and (max-width: 477px)
+    .basket_holder
+        //border: 1px solid black
+        width: 100%
+    .recycling_bin
+        position: absolute
+        right: 15px 
+        top: 80px

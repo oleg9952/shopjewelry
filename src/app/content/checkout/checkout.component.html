@@ -48,12 +48,15 @@
       <div class="checkout_btn">
         checkout
       </div>
+      <div class="totalPrice">
+        Total: {{ final }}$
+      </div>
     </div>
   </div>
   <div class="checkout_right">
     <div class="basket_holder">
       <h1 class="basket_title">Basket</h1>
-
+      <!-- *ngFor="let list of itemList; let i = index" -->
       <div class="basket_content" *ngFor="let list of itemList; let i = index">
         <div class="basket_row">
           <div class="basket_img">
@@ -75,7 +78,7 @@
           <p class="total_amount">{{ list.finalPrice }}$</p>
         </div>
         <div class="basket_row last_row">
-          <div class="recycling_bin" (click)="itemList.splice(i, 1)"></div>
+          <div class="recycling_bin" (click)="itemList.splice(i, 1); reCalculateTotal()"></div>
         </div>
       </div>
 

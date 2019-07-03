@@ -33,7 +33,7 @@
 
 .discounts_holder
     width: 1061px
-    //background-color: green
+    // background-color: green
     min-height: 100px
     margin: 0 auto 122px
 .discounts_wrapper
@@ -243,3 +243,71 @@
         top: 20px
         right: 0
     
+
+@media screen and (min-width: 1140px)
+    .categories_responsive
+        display: none
+@media screen and (max-width: 1140px)
+    .banner_holder
+        display: none
+    .discounts_title
+        margin-top: 30px
+    .categories_holder
+        display: none
+    .categories_responsive
+        width: 100%
+        height: 330px
+        margin-bottom: 137px
+        // background-color: green
+        display: grid
+        grid-gap: 10px
+        grid-template-columns: repeat(2, 1fr)
+        .categories_item
+            background-color: #fff
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            outline: none
+            position: relative
+        .item_1-resp
+            background-image: url("/assets/content/home/category1.jpg")
+        .item_2-resp
+            background-image: url("/assets/content/home/category2.jpg")
+        .item_3-resp
+            background-image: url("/assets/content/home/category3.jpg")
+        .item_4-resp
+            background-image: url("/assets/content/home/category4.jpg")
+@media screen and (max-width: 1075px)
+    .discounts_holder
+        width: 100%
+        // background-color: green
+        min-height: 100px
+        margin: 0 auto 122px
+        //border: 1px solid #fff
+    .discounts_wrapper
+        display: grid
+        grid-template-columns: repeat(3, 218px)
+        grid-column-gap: 45px
+        grid-row-gap: 30px
+        width: 747px
+        margin: 0 auto
+        //border: 1px solid #000
+    .description
+        width: 100%
+        border: 1px solid #fff
+        p 
+            padding: 0 10px
+@media screen and (max-width: 768px)
+    .discounts_wrapper
+        grid-template-columns: repeat(2, 218px)
+        width: 483px
+    .categories_responsive
+        grid-template-columns: 1fr
+        height: 600px
+        margin-bottom: 50px
+    .description
+        display: none
+@media screen and (max-width: 640px)
+    .discounts_wrapper
+        grid-template-columns: repeat(1, 218px)
+        width: 221px

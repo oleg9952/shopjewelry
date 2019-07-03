@@ -26,4 +26,12 @@ export class ShoppingCartService {
     return this.shoppingList;
   }
 
+  calculateTotal() {
+    let totalToPay = 0;
+    for(let item of this.shoppingList) {
+      totalToPay += item.finalPrice;
+    }
+    return totalToPay;    
+  }
+
 }

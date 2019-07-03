@@ -8,6 +8,7 @@ import { ShoppingCartService } from "../../services/shopping-cart.service";
   styleUrls: ['./checkout.component.sass']
 })
 export class CheckoutComponent implements OnInit {
+  final;
   
   checkState: boolean = false;
 
@@ -16,18 +17,20 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private cartService: ShoppingCartService) { }
 
-  // productName: string;
-
-  // receiveMessage($event) {
-  //   this.productName = $event;
-  // }
-
   ngOnInit() {
     this.itemList = this.cartService.getList();
+    this.final = this.cartService.calculateTotal();
   }
 
-  // removeItem() {
-  //   this.cartService.removeFromList(this.itemList.id)
-  // }
+  reCalculateTotal() {
+    let totalToPay = 0;
+    for(let item of this.itemList) {
+      totalToPay += item.finalPrice;
+    }
+    this.final = totalToPay;
+  }
 
+  logTotal() {
+    console.log(this.final);
+  }
 }

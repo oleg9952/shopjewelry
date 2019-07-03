@@ -77,3 +77,42 @@
     &:hover
         background-color: #aeae74
     
+
+
+@media screen and (max-width: 888px)
+ .forms_holder
+    width: 386px
+    //border: 1px solid #fff
+    height: 600px
+    margin: 0 auto
+    position: relative
+    // background-color: #fff
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-flow: column
+    .sign-in
+        width: 100%
+        height: 254px
+    .line
+        width: 100%
+        height: 1px
+        position: absolute
+        background-color: #999966
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        // display: none
+    .sign-up
+        width: 100%
+        height: 254px
+        //border: 1px solid blue
+        //background-color: #fff
+        float: right   
+@media screen and (max-width: 425px)
+    .forms_holder
+        //border: 1px solid black
+        width: 100% !important
+        padding: 0 5px
+        .signin_inp
+            width: 100% !important
