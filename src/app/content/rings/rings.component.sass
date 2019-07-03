@@ -342,3 +342,52 @@
         cursor: pointer
         background-color: #999966
         color: #fff
+
+
+@media screen and (max-width: 1024px)
+    .cards_holder
+        grid-template-columns: repeat(2, 218px)
+        width: 508px
+        //border: 1px solid black
+@media screen and (min-width: 769px)
+    .filter_toggle_mobile
+        display: none
+@media screen and (max-width: 769px)
+    .wrapper
+        display: block
+        padding-top: 40px
+    .filter_holder
+        background-color: orange
+    .filter_holder
+        padding-top: 0px
+        background-color: #fff
+        box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.20)
+        height: 60px
+        overflow: hidden
+        padding-top: 20px
+        transition: 600ms
+
+    .filter_toggle_mobile
+        width: 90%
+        height: 30px
+        border-radius: 10px
+        // background-color: orange
+        margin: 0 auto
+        text-align: center
+        color: #000
+        line-height: 29px
+        font-family: Copse
+        font-style: normal
+        text-transform: uppercase
+        transition: 150ms
+    .filter_toggle_mobile:hover
+        cursor: pointer
+        color: #999966
+
+    .last_filter
+        margin-bottom: 20px
+        height: 90px
+@media screen and (max-width: 640px)
+    .cards_holder
+        grid-template-columns: repeat(1, 218px)
+        width: 220px

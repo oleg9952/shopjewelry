@@ -1,5 +1,6 @@
 <div class="wrapper">
-  <div class="filter_holder">
+  <div class="filter_holder" [style.height]="filterState ? 'auto' : '60px'" [style.transition]="'600ms'">
+    <div class="filter_toggle_mobile" (click)="toggleFilter()">Show filter</div>
     <div class="categories_holder">
       <ul class="filter_nav">
         <li><a href="#">Categories</a></li>
@@ -90,8 +91,7 @@
         </label>
       </div>
     </div>
-
-    <div class="filter_container">
+    <div class="filter_container last_filter">
       <p class="title_filter_container">
         For whom
       </p>
@@ -106,7 +106,6 @@
         </label>
       </div>
     </div>
-    
   </div>
   <div class="rings_content">
     <div class="rings_sort">

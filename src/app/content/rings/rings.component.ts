@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RingsComponent implements OnInit {
 
+  filterState: boolean = false;
+
   ringCards: any[] = [
     {
       id: 1,
@@ -100,6 +102,10 @@ export class RingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleFilter() {
+    this.filterState = !this.filterState;
   }
 
 }
