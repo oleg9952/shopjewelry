@@ -9,19 +9,29 @@ import { ShoppingCartService } from "../../services/shopping-cart.service";
 })
 export class CheckoutComponent implements OnInit {
   
+  checkState: boolean = false;
+
+
   itemList = [];
 
   constructor(private cartService: ShoppingCartService) { }
 
-  productName: string;
+  // productName: string;
 
-  receiveMessage($event) {
-    this.productName = $event;
-  }
+  // receiveMessage($event) {
+  //   this.productName = $event;
+  // }
 
   ngOnInit() {
     this.itemList = this.cartService.getList();
   }
-  
+
+  logArray() {
+    console.log(this.itemList.length);
+  }
+
+  // removeItem() {
+  //   this.cartService.removeFromList(this.itemList.id)
+  // }
 
 }

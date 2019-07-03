@@ -166,8 +166,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       cardTitle: '',
       cardPrice: 0,
       finalPrice: 0,
-      numberOfRings: 0,
-      numberOfItems: 0
+      numberOfRings: 0
+      // numberOfItems: 0
   };
 
   reviews: any[] = [
@@ -270,6 +270,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   sendData() {
     this.modalState = !this.modalState;
+    this.selectedProduct.numberOfRings = this.number;
     this.cartService.addToList(this.selectedProduct);
   }
  
