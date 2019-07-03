@@ -30,12 +30,33 @@
             </div>
         </div>
     </div>
-    
 
+    <p class="charactery_title responsive_item">
+        <!-- Silver rings with fianites (1RI38993-R / 12/1) -->
+        {{ selectedProduct.cardTitle }}
+    </p>
+    
+    <div class="product_slider responsive_item">
+        <div class="slider_options">
+            <div class="item" (click)="firstProductImg()">
+                <img [src]="selectedProduct.cardImg">
+            </div>
+            <div class="item" (click)="secondProductImg()">
+                <img [src]="selectedProduct.imgPlaceholder">
+            </div>
+        </div>
+        <div class="img_holder">
+            <div class="slider_img">
+                    <!-- imgState ? 'selectedProduct.cardImg' : 'selectedProduct.imgPlaceholder' -->
+                <img [src]="selectedProduct.cardImg" [style.display]="imgState ? 'block' : 'none'">
+                <img [src]="selectedProduct.imgPlaceholder" [style.display]="imgState ? 'none' : 'block'">
+            </div>
+        </div>
+    </div>
 
     <div class="content_holder">
         <div class="left">
-            <div class="product_slider">
+            <div class="product_slider desktop_item">
                 <div class="slider_options">
                     <div class="item" (click)="firstProductImg()">
                         <img [src]="selectedProduct.cardImg">
@@ -131,7 +152,7 @@
         </div>
         <div class="right">
             <div class="charactery">
-                <p class="charactery_title">
+                <p class="charactery_title desktop_item">
                     <!-- Silver rings with fianites (1RI38993-R / 12/1) -->
                     {{ selectedProduct.cardTitle }}
                 </p>
@@ -213,5 +234,102 @@
                 </div>
             </div>
         </div>
+    </div>
+
+<!-- _____________________RESPONSIVE -->
+    <div class="responsive">
+
+        <div class="product_head">
+            <div class="head_left-mobile">
+                <div class="product_img_holder">
+                    <img [src]="selectedProduct.cardImg" width="100%" height="100%" [style.display]="imgState ? 'block' : 'none'">
+                    <img [src]="selectedProduct.imgPlaceholder" width="100%" height="100%" [style.display]="imgState ? 'none' : 'block'">
+                    <div class="img_dots">
+                        <div class="dots_item" (click)="firstProductImg()"
+                        [style.background-color]="imgState ? '#999966' : '#C4C4C4'"></div>
+                        <div class="dots_item" (click)="secondProductImg()"
+                        [style.background-color]="imgState ? '#C4C4C4' : '#999966'"></div>
+                    </div>
+                </div>
+
+                <div class="purchase_number purchase_number-mobile">
+                    <div class="decrement" (click)="decrement()"></div>
+                    <input type="text" class="p_number" maxlength="2" value="{{ number }}">
+                    <div class="increment" (click)="increment()"></div>
+                </div>
+            </div>
+            <div class="head_right-mobile">
+                <div class="head_product_name">
+                    {{ selectedProduct.cardTitle }}
+                </div>
+                <div class="charactery_right charactery_right-mobile">
+                    <div class="product_prop">Material: Silver</div>
+                    <div class="product_prop">Metal color: White</div>
+                    <div class="product_prop">Collection: Savanna</div>
+                    <div class="product_prop">Average weight: 2.3</div>
+                </div>
+                <div class="product_price">
+                    <!-- {{ selectedProduct.cardPrice }} -->
+                    <!-- (calculatedPrice > selectedProduct.cardPrice) ? 'calculatedPrice' : 'selectedProduct.cardPrice' -->
+                    <span>{{ (calculatedPrice > selectedProduct.cardPrice) ? calculatedPrice : selectedProduct.cardPrice }}$</span>
+                    <div class="current_discount">
+                        40$
+                        <div class="line_through"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_buy_byn" (click)="openModal()">
+            Buy
+        </div>
+
+
+
+        <div class="accordion_holder">
+            <div class="accordion">  
+                <div class="accordion_header" (click)="toggleAccordion()">
+                    All characteristics
+                    <div class="accordion_arrow" [ngClass]="accordionState ? 'active' : ''"></div>
+                </div>
+                <!-- [ngClass]="stateCheck ? 'active' : ''" -->
+                <div class="accordion_body" [style.height]="accordionState ? '262px' : '0px'">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    </p>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    </p>
+                    <p>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>         
+            </div>
+        </div>
+
+        <div class="complete_title">
+            Complete your image
+        </div>
+        <div class="complete_holder">
+            <div class="complete_cart">
+                <div class="cart_complete_img complete_1"></div>
+                <p class="cart_title">Braslet Elegantnost</p>
+                <div class="cart_price_holder">
+                    
+                </div>
+            </div>
+            <div class="complete_cart">
+                <div class="cart_complete_img complete_2"></div>
+                <p class="cart_title">Earrings “Anna”</p>
+                <div class="cart_price_holder">
+                    
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>

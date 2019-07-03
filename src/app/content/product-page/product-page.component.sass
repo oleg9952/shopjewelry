@@ -3,7 +3,7 @@
     min-height: 250px
 
 .content_holder
-    border: 1px solid #000
+    //border: 1px solid #000
     min-height: 100px
     display: grid 
     grid-template-columns: 1fr 1fr
@@ -551,7 +551,7 @@
     position: absolute
     top: 0%
     left: 50%
-    transform: translate(-50%, -101%)
+    transform: translate(-50%, -120%)
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
     animation: showModal 500ms forwards ease-out
     animation-delay: 200ms
@@ -671,3 +671,196 @@
         top: 25%
         left: 50%
         transform: translate(-50%, 0%)
+
+
+@media screen and (min-width: 1024px)
+    .responsive_item
+        display: none
+@media screen and (max-width: 1023px)
+    .desktop_item
+        //border: 1px solid black
+        display: none
+    .content_holder
+        //border: 1px solid #000
+        min-height: 100px
+        display: flex
+        flex-flow: column-reverse
+    .charactery_title
+        margin-top: 20px
+        margin-bottom: 15px
+    .product_slider
+        margin: 0 auto
+    .charactery
+        height: 270px
+        margin-bottom: 0px
+    .accordion
+        //border: 1px solid black
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+    .accordion_header
+        text-align: center
+    .accordion_arrow
+        display: none
+    .accordion_holder
+        margin-bottom: 0px
+    .complete
+        display: none
+@media screen and (min-width: 640px)
+    .product_head
+        display: none
+    .responsive
+        display: none
+@media screen and (max-width: 640px)
+    .responsive_item
+        display: none
+    .content_holder
+        display: none
+    .product_head
+        //border: 1px solid black
+        width: 100%
+        min-height: 100px
+        display: grid
+        grid-template-columns: 45% 55%
+        padding-top: 18px
+        margin-bottom: 17px
+    .product_head > div
+        //border: 1px solid blue
+    .product_img_holder img
+        outline: none
+        border: none
+    .product_img_holder
+        width: 126px
+        height: 126px
+        background-color: grey
+        position: relative
+        margin-bottom: 30px
+        // overflow: hidden
+        .img_dots
+            background-color: #fff
+            width: 50px
+            height: 10px
+            position: absolute
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+            display: flex
+            justify-content: space-around
+            align-items: center
+            
+            .dots_item
+                width: 8px
+                height: 8px
+                background-color: #C4C4C4
+                border-radius: 50%
+                cursor: pointer
+            .dots_item:hover
+                background-color: #999966
+
+
+
+    .purchase_number-mobile
+        margin-left: 13px
+        margin-bottom: 0px
+    .head_product_name
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 15px
+        margin-bottom: 20px
+    .charactery_right-mobile
+        //border: 1px solid black
+        margin-bottom: 13px
+    .charactery_right-mobile .product_prop
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+    .product_price
+        //border: 1px solid black
+        width: 140px
+        margin-left: auto
+        margin-bottom: 0px
+    .product_price span
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 18px
+    .mobile_buy_byn
+        width: 95%
+        height: 34px
+        background-color: #999966
+        margin: 0 auto
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        text-align: center
+        color: #ffffff
+        line-height: 33px
+        transition: 150ms
+        margin-bottom: 20px
+    .mobile_buy_byn:hover
+        cursor: pointer
+        background-color: #cdcd89
+    .accordion_holder
+        // border: 1px solid black
+        padding: 0px
+        margin-bottom: 8px
+    .accordion
+        //border: 1px solid black
+        // height: 297px
+        height: auto
+    .accordion_header
+        // background-color: orange
+        text-align: left
+        height: 25px
+        border-bottom: 2px solid #999966
+        padding-top: 3px
+        .accordion_arrow
+            display: block
+            background-position: center
+    .complete_title
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 15px
+        line-height: 15px
+        text-align: center
+        margin-bottom: 27px
+    .complete_holder
+        border: 1px solid black
+        min-height: 153px
+        display: flex
+        justify-content: space-around
+    .complete_holder > div
+        border: 1px solid black 
+        width: 139px
+    .cart_complete_img
+        width: 112px
+        height: 111px
+        border: 1px solid black
+        margin: 0 auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-bottom: 8px
+    .complete_1
+        background-image: url("/assets/content/product-page/complete.jpg")
+    .complete_2
+        background-image: url("/assets/content/product-page/complete2.jpg")
+    .cart_title
+        text-align: center
+        font-family: Copse
+        font-style: normal
+        font-weight: normal
+        font-size: 12px
+        margin-bottom: 15px
+
+
+
+        
+            
+    
