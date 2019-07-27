@@ -1,2 +1,0 @@
-# Shopjewelry
-Beetroot final project
