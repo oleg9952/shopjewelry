@@ -32,64 +32,64 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   ringCards: any[] = [
     {
       id: 1,
-      cardImg: "/assets/content/rings/ring1_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring1_2.jpg",
+      cardImg: "../../../assets/content/rings/ring1_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring1_2.jpg",
       cardTitle: "The Davina Diamond Ring",
       cardPrice: 29
     },
     {
       id: 2,
-      cardImg: "/assets/content/rings/ring2_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring2_2.jpg",
+      cardImg: "../../../assets/content/rings/ring2_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring2_2.jpg",
       cardTitle: "The Alita Diamond Ring",
       cardPrice: 13
     },
     {
       id: 3,
-      cardImg: "/assets/content/rings/ring3_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring3_2.jpg",
+      cardImg: "../../../assets/content/rings/ring3_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring3_2.jpg",
       cardTitle: "The Swathe Diamond Ring",
       cardPrice: 37
     },
     {
       id: 4,
-      cardImg: "/assets/content/rings/ring4_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring4_2.jpg",
+      cardImg: "../../../assets/content/rings/ring4_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring4_2.jpg",
       cardTitle: "The Fringe Diamond Ring",
       cardPrice: 11
     },
     {
       id: 5,
-      cardImg: "/assets/content/rings/ring5_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring5_2.jpg",
+      cardImg: "../../../assets/content/rings/ring5_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring5_2.jpg",
       cardTitle: "The Shaughn Solitaire",
       cardPrice: 170
     },
     {
       id: 6,
-      cardImg: "/assets/content/rings/ring6_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring6_2.jpg",
+      cardImg: "../../../assets/content/rings/ring6_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring6_2.jpg",
       cardTitle: "The S Alphabet Ring",
       cardPrice: 16
     },
     {
       id: 7,
-      cardImg: "/assets/content/rings/ring7_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring7_2.jpg",
+      cardImg: "../../../assets/content/rings/ring7_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring7_2.jpg",
       cardTitle: "The Roy Diamond Ring",
       cardPrice: 32
     },
     {
       id: 8,
-      cardImg: "/assets/content/rings/ring8_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring8_2.jpg",
+      cardImg: "../../../assets/content/rings/ring8_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring8_2.jpg",
       cardTitle: "The Arsham Diamond Ring",
       cardPrice: 18
     },
     {
       id: 9,
-      cardImg: "/assets/content/rings/ring9_1.jpg",
-      imgPlaceholder: "/assets/content/rings/ring9_2.jpg",
+      cardImg: "../../../assets/content/rings/ring9_1.jpg",
+      imgPlaceholder: "../../../assets/content/rings/ring9_2.jpg",
       cardTitle: "The Ettore Diamond Ring",
       cardPrice: 43
     },
@@ -97,8 +97,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.1,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card1_1.jpg',
-      imgPlaceholder: "/assets/content/home/card1_2.jpg",
+      cardImg: '../../../assets/content/home/card1_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card1_2.jpg",
       cardTitle: 'Silver ring with fianites',
       oldPrice: 40,
       cardPrice: 18 
@@ -106,8 +106,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.2,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card2_1.jpg',
-      imgPlaceholder: "/assets/content/home/card2_2.jpg",
+      cardImg: '../../../assets/content/home/card2_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card2_2.jpg",
       cardTitle: 'The Naveah Diamond Ring',
       oldPrice: 40,
       cardPrice: 21
@@ -115,8 +115,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.3,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card3_1.jpg',
-      imgPlaceholder: "/assets/content/home/card3_2.jpg",
+      cardImg: '../../../assets/content/home/card3_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card3_2.jpg",
       cardTitle: 'The Nilav Diamond Ring',
       oldPrice: 40,
       cardPrice: 26
@@ -124,8 +124,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.4,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card4_1.jpg',
-      imgPlaceholder: "/assets/content/home/card4_2.jpg",
+      cardImg: '../../../assets/content/home/card4_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card4_2.jpg",
       cardTitle: 'The Blink Diamond Ring',
       oldPrice: 40,
       cardPrice: 15 
@@ -133,8 +133,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.5,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card5_1.jpg',
-      imgPlaceholder: "/assets/content/home/card5_2.jpg",
+      cardImg: '../../../assets/content/home/card5_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card5_2.jpg",
       cardTitle: 'The Onaona Diamond Ring',
       oldPrice: 40,
       cardPrice: 20 
@@ -142,8 +142,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.6,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card6_1.jpg',
-      imgPlaceholder: "/assets/content/home/card6_2.jpg",
+      cardImg: '../../../assets/content/home/card6_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card6_2.jpg",
       cardTitle: 'The M Alphabet Ring',
       oldPrice: 40,
       cardPrice: 16 
@@ -151,8 +151,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     {
       id: 1.7,
       discountSize: 'outlet -50%',
-      cardImg: '/assets/content/home/card7_1.jpg',
-      imgPlaceholder: "/assets/content/home/card7_2.jpg",
+      cardImg: '../../../assets/content/home/card7_1.jpg',
+      imgPlaceholder: "../../../assets/content/home/card7_2.jpg",
       cardTitle: 'The Delyth Diamond Ring',
       oldPrice: 40,
       cardPrice: 37 
